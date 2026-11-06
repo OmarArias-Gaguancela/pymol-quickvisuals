@@ -4,10 +4,20 @@ These exercises teach structural biology by asking questions in plain language. 
 
 ## Before the session
 
-1. Install PyMOL and Claude Code.
-2. Run `pip install git+https://github.com/OmarArias-Gaguancela/pymol-quickvisuals`, then `pymol-quickvisuals setup`.
-3. Run `pymol-quickvisuals doctor`. Every line should say `ok`.
-4. Open Claude Code and ask: *"Check that PyMOL is connected."* PyMOL opens by itself.
+1. Install [PyMOL](https://pymol.org), [Python 3.10+](https://www.python.org/downloads/) (on Windows, tick **"Add Python to PATH"**), and the [Claude desktop app](https://claude.com/download).
+2. Open Claude in **Code** mode and paste these two lines into the chat, asking Claude to run them (or run them in a terminal yourself):
+   ```bash
+   python -m pip install https://github.com/OmarArias-Gaguancela/pymol-quickvisuals/archive/refs/heads/main.zip
+   ```
+   ```bash
+   python -m pymol_quickvisuals setup
+   ```
+3. Run `python -m pymol_quickvisuals doctor`. Every line should say `ok`.
+4. **Start a new session** (or restart Claude Desktop) and ask: *"Check that PyMOL is connected."* PyMOL opens by itself.
+
+Troubleshooting:
+- `python` not found: reinstall Python with "Add Python to PATH" ticked, or use `py` instead of `python` on Windows.
+- PyMOL not found: set `PYMOL_PATH` to the PyMOL program, or start PyMOL yourself with `python -m pymol_quickvisuals launch`.
 
 ## Exercise 1: Hemoglobin and oxygen (20 min)
 

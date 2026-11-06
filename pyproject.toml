@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pymol-quickvisuals"
-version = "0.1.0"
+version = "0.2.0"
 description = "Control PyMOL from Claude: plain-language commands, real error reporting, and screenshots Claude can see."
 readme = "README.md"
 license = "MIT"

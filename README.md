@@ -14,15 +14,23 @@ PyMOL QuickVisuals is an [MCP](https://modelcontextprotocol.io) server. It works
 
 ## Install
 
-You need Python 3.10+, PyMOL, and [Claude Code](https://claude.com/claude-code).
+You need Python 3.10+, PyMOL, and the [Claude desktop app](https://claude.com/download) or [Claude Code](https://claude.com/claude-code). Git is not required.
+
+Run these two commands in a terminal:
 
 ```bash
-pip install git+https://github.com/OmarArias-Gaguancela/pymol-quickvisuals
-pymol-quickvisuals setup
-pymol-quickvisuals doctor
+python -m pip install https://github.com/OmarArias-Gaguancela/pymol-quickvisuals/archive/refs/heads/main.zip
 ```
 
-`setup` registers the server with Claude Code for all your projects. Start a new Claude Code session and ask it to show you a protein.
+```bash
+python -m pymol_quickvisuals setup
+```
+
+Or, in the Claude desktop app's Code mode, paste both lines into the chat and ask Claude to run them.
+
+`setup` registers the server with every Claude app it finds: Claude Code (terminal and the desktop app's Code mode) and Claude Desktop chat, including the Microsoft Store version. It doesn't need the `claude` command. Restart Claude Desktop or start a new Code session, then ask Claude to show you a protein.
+
+To check your setup, run `python -m pymol_quickvisuals doctor`. Use `setup --code-only` or `setup --desktop-only` to register with just one app.
 
 Using another MCP client? Point it at `python -m pymol_quickvisuals` as a stdio server.
 
